@@ -152,7 +152,7 @@ endif
 syntax on
 colorscheme solarized
 set background="dark"
-:so ~/vimfiles/vim/bundle/vim-colors-solarized/autoload/togglebg.vim
+:so ~/.vim/bundle/vim-colors-solarized/autoload/togglebg.vim
 
 " Style
 highlight CursorLine cterm=bold
