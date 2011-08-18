@@ -17,3 +17,4 @@ tmtags
 rerun.txt
 *.swn
 *.swm
+/vim/bundle/*
