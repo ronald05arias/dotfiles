@@ -96,11 +96,11 @@ let g:snippetsEmu_key = "<S-Tab>"
 set laststatus=2
 
 " Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
+map <Leader>rm :Rmodel 
+map <Leader>rc :Rcontroller 
+map <Leader>rv :Rview 
+map <Leader>ru :Runittest 
+map <Leader>rf :Rfunctionaltest 
 map <Leader>tm :RTmodel 
 map <Leader>tc :RTcontroller 
 map <Leader>tv :RTview 
