@@ -16,8 +16,7 @@ Bundle 'rails.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'bufexplorer.zip'
 
-" \ is the leader character
-let mapleader = ","
+let mapleader = ","                                   " , is the leader character 
 
 " Editing
 set autowrite autoindent
@@ -29,21 +28,25 @@ set whichwrap=<,>,h,l                                 " wrap to next/previous li
 set cursorline                                        " highlight current line
 set nofoldenable
 set backspace=indent,eol,start                        " allow backspacing over everything in insert mode
-set nobackup
-set nowritebackup
 set history=50                                        " keep 50 lines of command line history
 set ruler		                                          " show the cursor position all the time
 set showcmd		                                        " display incomplete commands
 
-" Map <c-s> to write current buffer
-map <c-s> :w<cr>
-imap <c-s> <c-o><c-s>
-imap <c-s> <esc><c-s>
+" Don't backup files as everything is in git
+set nobackup
+set nowritebackup
+set noswapfile
 
-" Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
-nnoremap <silent> <M-F12> :BufExplorer<CR>
-nnoremap <silent> <F12> :bn<CR>
-nnoremap <silent> <S-F12> :bp<CR>
+" Map Ctrl-s to write current buffer
+map <C-s> :w<CR>
+imap <C-s> <C-o><C-s>
+imap <C-s> <Esc><C-s>
+
+" Buffers - explore/next/previous/close: Alt-Tab, Ctrl-Tab, Ctrl-Alt-Tab, Alt-F4.
+nnoremap <silent> <A-Tab> :BufExplorer<CR>
+nnoremap <silent> <C-Tab> :bnext<CR>
+nnoremap <silent> <C-A-Tab> :bprevious<CR>
+nnoremap <silent> <A-F4> :bd<CR>
 
 " Store .swp files in /var/tmp with mangled names
 set directory=/var/tmp//
@@ -62,29 +65,29 @@ set complete=.,t
 let g:CommandTAcceptSelectionSplitMap='<C-w>'
 
 " Filetypes
-filetype off " forces reload
-filetype plugin indent on
+filetype off                                          " forces reload
+filetype plugin indent on                             " enable filetype plugin
 
 " Windows
-nmap <C-N> <C-W>w
-nmap <C-P> <C-W>W
-nmap ,n <C-W>w
-nmap ,p <C-W>W
-nmap ,H <C-W>H
-nmap ,J <C-W>J
-nmap ,K <C-W>K
-nmap ,L <C-W>L
-nmap ,= <C-W>=
-nmap ,T <C-W>T
-nmap ,r <C-W>r
-nmap ,R <C-W>R
-set hidden
-set equalalways
-set splitbelow splitright
-set mouse=a
+nmap <C-N> <C-W>w                                     " Ctrl-n : next window
+nmap <C-P> <C-W>W                                     " Ctrl-p : previous window
+nmap <Leader>n <C-W>w                                 " ,n     : next window
+nmap <Leader>p <C-W>W                                 " ,p     : previous window
+nmap <Leader>H <C-W>H                                 " ,H     : move the current window to the left
+nmap <Leader>J <C-W>J                                 " ,J     : move the current window to the bottom
+nmap <Leader>K <C-W>K                                 " ,K     : move the current window to the top
+nmap <Leader>L <C-W>L                                 " ,L     : move the current window to the right
+nmap <Leader>= <C-W>=                                 " ,=     : make all windows the same size
+nmap <Leader>T <C-W>T                                 " ,T     : move current window to new tab
+nmap <Leader>r <C-W>r                                 " ,r     : rotate windows down/right
+nmap <Leader>R <C-W>R                                 " ,R     : rotate windows up/left
+set hidden                                            " enable unsaved buffers
+set equalalways                                       " resize windows to equal size when splitting/closing
+set splitbelow splitright                             " split windows below on to the right
+set mouse=a                                           " enable the mouse
 
 " NERD-Tree
-nmap <Leader>f :NERDTreeToggle<CR>
+nmap <Leader>f :NERDTreeToggle<CR>                    " ,f     : toggle NERDTree
 
 " Let %% expands to directory of %
 cabbr <expr> %% expand('%:h')
