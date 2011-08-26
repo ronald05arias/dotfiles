@@ -39,14 +39,14 @@ set noswapfile
 
 " Map Ctrl-s to write current buffer
 map <C-s> :w<CR>
-imap <C-s> <C-o><C-s>
+imap <C-s> <C-O><C-s>
 imap <C-s> <Esc><C-s>
 
-" Buffers - explore/next/previous/close: Alt-Tab, Ctrl-Tab, Ctrl-Alt-Tab, Alt-F4.
+" Buffers - explore/next/previous/close: Alt-Tab, Ctrl-Tab, Ctrl-Alt-Tab, Alt-q.
 nnoremap <silent> <A-Tab> :BufExplorer<CR>
 nnoremap <silent> <C-Tab> :bnext<CR>
 nnoremap <silent> <C-A-Tab> :bprevious<CR>
-nnoremap <silent> <A-F4> :bd<CR>
+nnoremap <silent> <A-q> :bd<CR>
 
 " Store .swp files in /var/tmp with mangled names
 set directory=/var/tmp//
@@ -67,6 +67,16 @@ let g:CommandTAcceptSelectionSplitMap='<C-w>'
 " Filetypes
 filetype off                                          " forces reload
 filetype plugin indent on                             " enable filetype plugin
+
+" Learn vim movement properly by disabling arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " Windows
 nmap <C-N> <C-W>w                                     " Ctrl-n : next window
