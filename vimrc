@@ -29,24 +29,13 @@ set cursorline                                        " highlight current line
 set nofoldenable
 set backspace=indent,eol,start                        " allow backspacing over everything in insert mode
 set history=50                                        " keep 50 lines of command line history
-set ruler		                                          " show the cursor position all the time
-set showcmd		                                        " display incomplete commands
+set ruler                                             " show the cursor position all the time
+set showcmd                                           " display incomplete commands
 
 " Don't backup files as everything is in git
 set nobackup
 set nowritebackup
 set noswapfile
-
-" Map Ctrl-s to write current buffer
-map <C-s> :w<CR>
-imap <C-s> <C-O><C-s>
-imap <C-s> <Esc><C-s>
-
-" Buffers - explore/next/previous/close: Alt-Tab, Ctrl-Tab, Ctrl-Alt-Tab, Alt-q.
-nnoremap <silent> <A-Tab> :BufExplorer<CR>
-nnoremap <silent> <C-Tab> :bnext<CR>
-nnoremap <silent> <C-A-Tab> :bprevious<CR>
-nnoremap <silent> <A-q> :bd<CR>
 
 " Store .swp files in /var/tmp with mangled names
 set directory=/var/tmp//
@@ -96,6 +85,17 @@ set equalalways                                       " resize windows to equal 
 set splitbelow splitright                             " split windows below on to the right
 set mouse=a                                           " enable the mouse
 
+" Buffers - explore/next/previous/close: Alt-Tab, CMD-k, CMD-j, Alt-q.
+nnoremap <silent> <A-Tab> :BufExplorer<CR>
+nnoremap <silent> <D-k> :bnext<CR>
+nnoremap <silent> <D-j> :bprevious<CR>
+nnoremap <silent> <A-q> :bd<CR>
+
+" Map Ctrl-s to write current buffer
+map <C-s> :w<CR>
+imap <C-s> <C-O><C-s>
+imap <C-s> <Esc><C-s>
+
 " NERD-Tree
 nmap <Leader>f :NERDTreeToggle<CR>                    " ,f     : toggle NERDTree
 
@@ -109,21 +109,21 @@ let g:snippetsEmu_key = "<S-Tab>"
 set laststatus=2
 
 " Leader shortcuts for Rails commands
-map <Leader>rm :Rmodel 
-map <Leader>rc :Rcontroller 
-map <Leader>rv :Rview 
-map <Leader>ru :Runittest 
-map <Leader>rf :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
+map <Leader>rm :Rmodel
+map <Leader>rc :Rcontroller
+map <Leader>rv :Rview
+map <Leader>ru :Runittest
+map <Leader>rf :Rfunctionaltest
+map <Leader>tm :RTmodel
+map <Leader>tc :RTcontroller
+map <Leader>tv :RTview
+map <Leader>tu :RTunittest
+map <Leader>tf :RTfunctionaltest
+map <Leader>sm :RSmodel
+map <Leader>sc :RScontroller
+map <Leader>sv :RSview
+map <Leader>su :RSunittest
+map <Leader>sf :RSfunctionaltest
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
@@ -139,10 +139,17 @@ au! BufRead,BufNewFile *.haml         setfiletype haml
 " Maps autocomplete to tab
 imap <Tab> <C-N>
 
+" Use TextMate's keymappings for tabbing, CMD-] and CMD-[
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+
+" Ctrl-l to type HashRocket in Ruby
 imap <C-L> <Space>=><Space>
 
 " Display extra whitespace
-" set list listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:·
 " show whitespace at the end of lines
 highlight WhitespaceEOL ctermbg=blue guibg=blue
 match WhitespaceEOL /\s\+$/
