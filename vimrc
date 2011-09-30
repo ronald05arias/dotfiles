@@ -15,6 +15,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'rails.vim'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'bufexplorer.zip'
+Bundle 'git://github.com/mileszs/ack.vim.git'
+Bundle 'cucumber.zip'
+Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 
 let mapleader = ","                                   " , is the leader character 
 
@@ -31,6 +34,7 @@ set backspace=indent,eol,start                        " allow backspacing over e
 set history=50                                        " keep 50 lines of command line history
 set ruler                                             " show the cursor position all the time
 set showcmd                                           " display incomplete commands
+set nowrap                                            " don't wrap lines
 
 " Don't backup files as everything is in git
 set nobackup
@@ -45,6 +49,9 @@ set incsearch                                         " incremental searching
 set hlsearch                                          " highlight searching
 nmap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>    " toggle highlight search
 set ignorecase smartcase                              " case only matters with mixed case expressions
+" Use ack for searching
+let g:ackhighlight = 1
+map <D-F> :Ack<space>
 
 " Tab completion options
 " (only complete to the longest unambiguous match, and show a menu)
@@ -52,6 +59,14 @@ set completeopt=longest,menu
 set wildmode=list:longest,list:full
 set complete=.,t
 let g:CommandTAcceptSelectionSplitMap='<C-w>'
+
+" Map Command-T to Command-T
+map <D-t> :CommandT<CR>
+imap <D-t> <Esc>:CommandT<CR>
+
+" Command-/ to toggle comments
+map <D-/> <plug>NERDCommenterToggle<CR>
+imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
 
 " Filetypes
 filetype off                                          " forces reload
@@ -177,3 +192,10 @@ set background="dark"
 " Style
 highlight CursorLine cterm=bold
 highlight MatchParen cterm=none ctermbg=none ctermfg=yellow
+
+" .vimrc editing
+nmap <leader>v :tabedit $MYVIMRC<CR>
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
