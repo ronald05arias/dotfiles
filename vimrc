@@ -1,6 +1,4 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+set nocompatible                                     " This must be first, because it changes other options as a side effect.
 
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -72,16 +70,6 @@ imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
 filetype off                                          " forces reload
 filetype plugin indent on                             " enable filetype plugin
 
-" Learn vim movement properly by disabling arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 " Windows
 nmap <C-N> <C-W>w                                     " Ctrl-n : next window
 nmap <C-P> <C-W>W                                     " Ctrl-p : previous window
@@ -100,11 +88,12 @@ set equalalways                                       " resize windows to equal 
 set splitbelow splitright                             " split windows below on to the right
 set mouse=a                                           " enable the mouse
 
-" Buffers - explore/next/previous/close: Alt-Tab, CMD-k, CMD-j, Alt-q.
-nnoremap <silent> <A-Tab> :BufExplorer<CR>
-nnoremap <silent> <D-k> :bnext<CR>
-nnoremap <silent> <D-j> :bprevious<CR>
-nnoremap <silent> <A-q> :bd<CR>
+" Use cursor keys to navigate buffers.
+map  <Right> :bnext<CR>
+map  <Left>  :bprev<CR>
+imap <Right> <ESC>:bnext<CR>
+imap <Left>  <ESC>:bprev<CR>
+map  <Del>   :bd<CR>
 
 " Map Ctrl-s to write current buffer
 map <C-s> :w<CR>
