@@ -10,7 +10,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'edsono/vim-matchit'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'rails.vim'
+Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'bufexplorer.zip'
 Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -47,9 +47,6 @@ set incsearch                                         " incremental searching
 set hlsearch                                          " highlight searching
 nmap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>    " toggle highlight search
 set ignorecase smartcase                              " case only matters with mixed case expressions
-" Use ack for searching
-let g:ackhighlight = 1
-map <D-F> :Ack<space>
 
 " Tab completion options
 " (only complete to the longest unambiguous match, and show a menu)
@@ -171,6 +168,9 @@ endif
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
 endif
+" Use ack for searching
+let g:ackhighlight = 1
+map <M-F> :Ack<space>
 
 " Color scheme
 syntax on
