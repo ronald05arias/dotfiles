@@ -28,6 +28,11 @@ In Terminal
   cd ~/.dotfiles/vim/bundle/command-t
   rake make
 
+== Font
+
+Preferred programming font is Inconsolata
+  http://www.levien.com/type/myfonts/inconsolata.html
+
 == Features
 
 I normally place all of my coding projects in ~/development, so this directory 
