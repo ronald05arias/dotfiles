@@ -68,10 +68,6 @@ filetype off                                          " forces reload
 filetype plugin indent on                             " enable filetype plugin
 
 " Windows
-nmap <C-N> <C-W>w                                     " Ctrl-n : next window
-nmap <C-P> <C-W>W                                     " Ctrl-p : previous window
-nmap <Leader>n <C-W>w                                 " ,n     : next window
-nmap <Leader>p <C-W>W                                 " ,p     : previous window
 nmap <Leader>H <C-W>H                                 " ,H     : move the current window to the left
 nmap <Leader>J <C-W>J                                 " ,J     : move the current window to the bottom
 nmap <Leader>K <C-W>K                                 " ,K     : move the current window to the top
@@ -84,6 +80,10 @@ set hidden                                            " enable unsaved buffers
 set equalalways                                       " resize windows to equal size when splitting/closing
 set splitbelow splitright                             " split windows below on to the right
 set mouse=a                                           " enable the mouse
+
+"Use cursor keys to navigate windows
+map <Up> <C-W>w
+map <Down> <C-W>W
 
 " Use cursor keys to navigate buffers.
 map  <Right> :bnext<CR>
@@ -154,6 +154,8 @@ set list listchars=tab:»·,trail:·
 " show whitespace at the end of lines
 highlight WhitespaceEOL ctermbg=blue guibg=blue
 match WhitespaceEOL /\s\+$/
+" Kill trailing White Space
+nnoremap <Leader>kws :%s/\s\+$//<CR>
 
 " Edit routes
 command! Rroutes :e config/routes.rb
@@ -170,7 +172,7 @@ if executable("ack")
 endif
 " Use ack for searching
 let g:ackhighlight = 1
-map <M-F> :Ack<space>
+map <C-F> :Ack<space>
 
 " Color scheme
 syntax on
