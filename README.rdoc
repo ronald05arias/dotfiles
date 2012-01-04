@@ -33,6 +33,15 @@ In Terminal
 Preferred programming font is Inconsolata
   http://www.levien.com/type/myfonts/inconsolata.html
 
+== Snippets
+
+Using the Snipmate plugin for Vim
+  git clone https://github.com/scrooloose/snipmate-snippets.git
+
+  rake deploy_local
+Allows you to do
+  def<tab>
+
 == Features
 
 I normally place all of my coding projects in ~/development, so this directory 

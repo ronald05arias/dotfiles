@@ -16,6 +16,7 @@ Bundle 'bufexplorer.zip'
 Bundle 'git://github.com/mileszs/ack.vim.git'
 Bundle 'cucumber.zip'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
+Bundle 'git://github.com/msanders/snipmate.vim.git'
 
 let mapleader = ","                                   " , is the leader character 
 
