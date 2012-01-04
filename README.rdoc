@@ -20,9 +20,13 @@ the following command.
 == Vim
 
 Vim is using Vundle to manage plugins
-Launch Vim and run :BundleInstall
-cd ~/.dotfiles/vim/bundle/command-t
-rake make
+
+In Vim
+  :BundleInstall
+
+In Terminal
+  cd ~/.dotfiles/vim/bundle/command-t
+  rake make
 
 == Features
 
