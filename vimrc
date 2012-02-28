@@ -174,6 +174,8 @@ endif
 " Use ack for searching
 let g:ackhighlight = 1
 map <C-F> :Ack<space>
+" Highlight word at cursor and then Ack it.
+nnoremap <leader>H *<C-O>:AckFromSearch!<CR>
 
 " Color scheme
 syntax on
