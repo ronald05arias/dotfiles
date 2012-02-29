@@ -18,7 +18,7 @@ Bundle 'cucumber.zip'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/msanders/snipmate.vim.git'
 
-let mapleader = ","                                   " , is the leader character 
+let mapleader = ","                                   " , is the leader character
 
 " Editing
 set autowrite autoindent
@@ -98,6 +98,9 @@ map <C-s> :w<CR>
 imap <C-s> <C-O><C-s>
 imap <C-s> <Esc><C-s>
 
+" May Y to behave like other capitals
+map Y y$
+
 " NERD-Tree
 nmap <Leader>f :NERDTreeToggle<CR>                    " ,f     : toggle NERDTree
 
@@ -109,6 +112,10 @@ let g:snippetsEmu_key = "<S-Tab>"
 
 " Always display the status line
 set laststatus=2
+set statusline=%F%m%r%h%w\ 
+set statusline+=%{fugitive#statusline()}\    
+set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
+set statusline+=\ [line\ %l\/%L]
 
 " Leader shortcuts for Rails commands
 map <Leader>rm :Rmodel
