@@ -26,3 +26,9 @@ alias rs='bundle exec rails server'
 alias a='autotest -rails'
 alias tlog='tail -f log/development.log'
 alias migrate='rake db:migrate'
+
+# databases
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias redisstart='redis-server /usr/local/etc/redis.conf'
+alias rcli='redis-cli'
