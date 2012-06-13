@@ -1,6 +1,7 @@
 --type-add=ruby=.haml,.rake,.rsel,.builder,.erb
 --type-add=css=.sass,.less
 --type-set=cucumber=.feature
+--type-add=js=.coffee
 --type-set=bin=.pdf
 --nobin
 --ignore-dir=tmp
