@@ -106,16 +106,13 @@ map Y y$
 " NERD-Tree
 nmap <Leader>f :NERDTreeToggle<CR>                    " ,f     : toggle NERDTree
 
-" Let %% expands to directory of %
-cabbr <expr> %% expand('%:h')
-
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
 
 " Always display the status line
 set laststatus=2
-set statusline=%F%m%r%h%w\ 
-set statusline+=%{fugitive#statusline()}\    
+set statusline=%F%m%r%h%w\
+set statusline+=%{fugitive#statusline()}\
 set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
 set statusline+=\ [line\ %l\/%L]
 
@@ -135,14 +132,6 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview
 map <Leader>su :RSunittest
 map <Leader>sf :RSfunctionaltest
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " For Haml
 au! BufRead,BufNewFile *.haml         setfiletype haml

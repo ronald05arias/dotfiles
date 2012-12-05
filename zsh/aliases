@@ -1,37 +1,6 @@
-# cd
-alias ..='cd ..'
-
-# ls
-alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -l"
-alias la='ls -A'
-
-# git
-alias gl='git pull'
-alias gp='rake && git push'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gco='git checkout'
-alias gb='git branch'
-alias gs='git status'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
-
-# rails
-alias b='bundle exec'
-alias rc='bundle exec rails console'
-alias rs='bundle exec rails server'
-alias a='autotest -rails'
-alias tlog='tail -f log/development.log'
-alias migrate='rake db:migrate'
-
 # databases
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-alias redisstart='redis-server /usr/local/etc/redis.conf'
-alias rcli='redis-cli'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
