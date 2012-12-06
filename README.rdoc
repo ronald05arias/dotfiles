@@ -4,12 +4,13 @@ These are config files to set up a system the way I like it.
 
 == Prerequisites
 
-  https://github.com/mxcl/homebrew/wiki/installation
+  Homebrew
   brew install git
   brew install bash-completion
   brew install macvim
   brew install ack
   brew install fasd
+  brew install zsh
 
 == Installation
 

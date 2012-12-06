@@ -31,7 +31,7 @@ export UPDATE_ZSH_DAYS=13
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler brew cake coffee fasd gem git gitfast heroku npm pow rails rbenv redis-cli vundle)
+plugins=(bundler brew cake coffee fasd gem git git-extras gitfast heroku npm pow rails3 rbenv redis-cli vundle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -45,7 +45,9 @@ export BUNDLER_EDITOR=mvim
 
 export NODE_PATH="/usr/local/lib/node_modules"
 
+# recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
+
 export PATH="$HOME/.rbenv/shims:$PATH"
 
 ### Added by the Heroku Toolbelt
