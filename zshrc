@@ -43,12 +43,9 @@ unsetopt correct_all
 export EDITOR=mvim
 export BUNDLER_EDITOR=mvim
 
-export NODE_PATH="/usr/local/lib/node_modules"
-
-# recommended by brew doctor
+### homebrew
 export PATH="/usr/local/bin:$PATH"
-
-export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="/usr/local/share/npm/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
