@@ -22,3 +22,6 @@ alias heroku-config-production='heroku config --remote heroku'
 alias heroku-console-production='heroku run console --remote heroku'
 alias heroku-ps-production='heroku ps --remote heroku'
 alias heroku-logs-production='heroku logs --tail --remote heroku'
+
+# Crashplan
+alias crashplan-port='ssh -L 4200:localhost:4243'
