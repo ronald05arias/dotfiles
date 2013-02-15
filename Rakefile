@@ -63,28 +63,12 @@ end
 def switch_shell
   if ENV["SHELL"] =~ /bash/
     puts "currently using bash"
-    print "switch to zsh? (recommended) [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
-      puts "switching to zsh"
-      system %Q{chsh -s `which zsh`}
-    when 'q'
-      exit
-    else
-      puts "skipping zsh"
-    end
+    puts "switching to zsh"
+    system %Q{chsh -s `which zsh`}
   elsif ENV["SHELL"] =~ /zsh/
     puts "currently using zsh"
-    print "switch to bash? [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
-      puts "switching to bash"
-      system %Q{chsh -s `which bash`}
-    when 'q'
-      exit
-    else
-      puts "skipping bash"
-    end
+    puts "switching to bash"
+    system %Q{chsh -s `which bash`}
   end
 end
 
@@ -92,16 +76,8 @@ def switch_to_zsh
   if ENV["SHELL"] =~ /zsh/
     puts "using zsh"
   else
-    print "switch to zsh? (recommended) [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
-      puts "switching to zsh"
-      system %Q{chsh -s `which zsh`}
-    when 'q'
-      exit
-    else
-      puts "skipping zsh"
-    end
+    puts "switching to zsh"
+    system %Q{chsh -s `which zsh`}
   end
 end
 
@@ -109,15 +85,7 @@ def install_oh_my_zsh
   if File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))
     puts "found ~/.oh-my-zsh"
   else
-    print "install oh-my-zsh? [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
-      puts "installing oh-my-zsh"
-      system %Q{git clone git://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
-    when 'q'
-      exit
-    else
-      puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
-    end
+    puts "installing oh-my-zsh"
+    system %Q{git clone git://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
   end
 end
