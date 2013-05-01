@@ -13,11 +13,14 @@ ZSH_THEME="rbenvgit"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
-DISABLE_AUTO_UPDATE="true"
+# Uncomment this to disable weekly auto-update checks
+#DISABLE_AUTO_UPDATE="true"
+
+# Uncomment this to disable the update prompt and silently update
+#DISABLE_UPDATE_PROMPT="true"
 
 # Change this value to set how frequently ZSH updates¬
-export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
