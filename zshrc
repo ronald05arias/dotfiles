@@ -20,7 +20,7 @@ ZSH_THEME="rbenvgit"
 #DISABLE_UPDATE_PROMPT="true"
 
 # Change this value to set how frequently ZSH updates¬
-export UPDATE_ZSH_DAYS=1
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
