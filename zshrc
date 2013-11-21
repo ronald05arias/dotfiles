@@ -43,8 +43,8 @@ source $ZSH/oh-my-zsh.sh
 # autocorrect is more annoying than helpful
 unsetopt correct_all
 
-export EDITOR=mvim
-export BUNDLER_EDITOR=mvim
+export EDITOR='vim'
+export BUNDLER_EDITOR='vim'
 
 ### homebrew
 export PATH="/usr/local/bin:$PATH"
