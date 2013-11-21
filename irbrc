@@ -51,4 +51,19 @@ def paste
   `pbpaste`
 end
 
+def change_log(stream)
+  if defined?(ActiveRecord::Base)
+    ActiveRecord::Base.logger = Logger.new(stream)
+    ActiveRecord::Base.clear_active_connections!
+  end
+end
+
+def show_log
+  change_log(STDOUT)
+end
+
+def hide_log
+  change_log(nil)
+end
+
 load File.dirname(__FILE__) + '/.railsrc' if ($0 == 'irb' && ENV['RAILS_ENV']) || ($0 == 'script/rails' && Rails.env)
