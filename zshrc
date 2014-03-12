@@ -36,6 +36,9 @@ export UPDATE_ZSH_DAYS=7
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(bundler brew cake coffee fasd gem git git-extras gitfast heroku npm pow rails rbenv redis-cli vundle postgres)
 
+# Use homebrew path for rbenv
+export RBENV_ROOT=$(brew --prefix rbenv)
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
