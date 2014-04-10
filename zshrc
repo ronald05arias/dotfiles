@@ -51,6 +51,7 @@ export BUNDLER_EDITOR='vim'
 
 ### homebrew
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
@@ -61,3 +62,8 @@ export BUNDLE_JOBS=4
 
 # aws-cli command completion
 source /usr/local/bin/aws_zsh_completer.sh
+
+# gopath
+export GOPATH=$HOME/gocode
+export PATH=$PATH:/usr/local/Cellar/go/1.0.2/bin/
+export PATH=$PATH:$GOPATH/bin
