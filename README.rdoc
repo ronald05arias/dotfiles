@@ -16,15 +16,17 @@ These are config files to set up a system the way I like it.
 
   git clone git@github.com:damonmorgan/dotfiles.git ~/.dotfiles
   cd ~/.dotfiles
-  git submodule update --init
   rake install
 
 == Vim
 
 Vim is using Vundle to manage plugins
 
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+
 In Vim
-  :BundleInstall
+  :PluginInstall
 
 In Terminal
   cd ~/.dotfiles/vim/bundle/command-t
