@@ -1,9 +1,15 @@
 set nocompatible                                     " This must be first, because it changes other options as a side effect.
 
-" Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+if filereadable(expand("~/.vimrc.plugins"))
+  source ~/.vimrc.plugins
+endif
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'vim-scripts/AutoClose'
 Bundle 'tpope/vim-fugitive'
