@@ -29,7 +29,7 @@ In Vim
   :PluginInstall
 
 In Terminal
-  cd ~/.dotfiles/vim/bundle/command-t
+  cd ~/.vim/bundle/command-t
   rake make
 
 == Font
