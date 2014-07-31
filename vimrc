@@ -4,30 +4,6 @@ if filereadable(expand("~/.vimrc.plugins"))
   source ~/.vimrc.plugins
 endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'vim-scripts/AutoClose'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'edsono/vim-matchit'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'git://github.com/tpope/vim-rails.git'
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'bufexplorer.zip'
-Bundle 'git://github.com/mileszs/ack.vim.git'
-Bundle 'cucumber.zip'
-Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-Bundle 'git://github.com/msanders/snipmate.vim.git'
-Bundle 'git://github.com/juvenn/mustache.vim.git'
-Bundle 'git://github.com/kchmck/vim-coffee-script.git'
-Bundle 'elzr/vim-json'
-Bundle 'Lokaltog/powerline', {'rtp':  'powerline/bindings/vim'}
-
 let mapleader = ","                                   " , is the leader character
 
 " Editing
