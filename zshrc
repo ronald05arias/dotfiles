@@ -60,9 +60,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Bundler 1.5.0
 export BUNDLE_JOBS=4
 
-# aws-cli command completion
-source /usr/local/bin/aws_zsh_completer.sh
-
 # gopath
 export GOPATH=$HOME/gocode
 export PATH=$PATH:/usr/local/Cellar/go/1.0.2/bin/
