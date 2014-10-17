@@ -9,6 +9,10 @@ alias sockson='networksetup -setsocksfirewallproxy "Wi-Fi" localhost 8080'
 alias tunnel='ssh -D 8080 -C -N'
 alias tnl='~/sshuttle/sshuttle 0/0 --dns -vvr'
 
+#osx
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 # Heroku
 alias h-config-staging='heroku config --remote heroku-staging'
 alias h-console-staging='heroku run console --remote heroku-staging'
