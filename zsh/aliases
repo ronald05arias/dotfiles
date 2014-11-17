@@ -14,16 +14,15 @@ alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # Heroku
-alias h-config-staging='heroku config --remote heroku-staging'
-alias h-console-staging='heroku run console --remote heroku-staging'
-alias h-ps-staging='heroku ps --remote heroku-staging'
-alias h-tail-staging='heroku logs --tail --remote heroku-staging'
-alias h-psql-staging='heroku pg:psql --remote heroku-staging'
-alias h-config-production='heroku config --remote heroku'
-alias h-console-production='heroku run console --remote heroku'
-alias h-ps-production='heroku ps --remote heroku'
-alias h-tail-production='heroku logs --tail --remote heroku'
-alias h-psql-production='heroku pg:psql --remote heroku'
+alias hc='heroku config --remote'
+alias hcon='heroku run console --remote'
+alias hrcon='heroku run rails console --remote'
+alias hps='heroku ps --remote'
+alias htail='heroku logs --tail --remote'
+alias hpsql='heroku pg:psql --remote'
 
 # Crashplan
 alias crashplan-port='ssh -L 4200:localhost:4243'
+
+# File sizes for current directory
+alias ducks='du -cksh *' 

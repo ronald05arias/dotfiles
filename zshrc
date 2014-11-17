@@ -57,7 +57,7 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Bundler 1.5.0
+# Bundler > 1.5.0
 export BUNDLE_JOBS=4
 
 # gopath
