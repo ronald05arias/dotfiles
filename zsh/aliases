@@ -13,16 +13,8 @@ alias tnl='~/sshuttle/sshuttle 0/0 --dns -vvr'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-# Heroku
-alias hc='heroku config --remote'
-alias hcon='heroku run console --remote'
-alias hrcon='heroku run rails console --remote'
-alias hps='heroku ps --remote'
-alias htail='heroku logs --tail --remote'
-alias hpsql='heroku pg:psql --remote'
-
 # Crashplan
 alias crashplan-port='ssh -L 4200:localhost:4243'
 
 # File sizes for current directory
-alias ducks='du -cksh *' 
+alias ducks='du -cksh *'

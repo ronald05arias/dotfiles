@@ -34,7 +34,7 @@ export UPDATE_ZSH_DAYS=7
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(aws bundler brew brew-cask cake coffee fasd gem git git-extras gitfast golang heroku npm postgres pow rails rake-fast rake rbenv redis-cli sbt scala vundle)
+plugins=(aws bundler brew brew-cask cake coffee fasd gem git git-extras gitfast golang heroku hero npm postgres rails rake-fast rake rbenv redis-cli sbt scala vundle)
 
 # Use homebrew path for rbenv
 export RBENV_ROOT=$(brew --prefix rbenv)
