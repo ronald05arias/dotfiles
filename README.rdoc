@@ -9,6 +9,7 @@ These are config files to set up a system the way I like it.
   brew install bash-completion
   brew install macvim
   brew install ack
+  brew install the_silver_surfer
   brew install fasd
   brew install zsh
 

@@ -7,7 +7,10 @@
 --ignore-dir=tmp
 --ignore-dir=vendor
 --ignore-dir=log
+--ignore-dir=coverage
 --sort-files
 --color
 --follow
 --group
+--with-filename
+--smart-case
