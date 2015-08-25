@@ -23,6 +23,7 @@ Plugin 'git://github.com/msanders/snipmate.vim.git'
 Plugin 'git://github.com/juvenn/mustache.vim.git'
 Plugin 'git://github.com/kchmck/vim-coffee-script.git'
 Plugin 'elzr/vim-json'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'Lokaltog/powerline', {'rtp':  'powerline/bindings/vim'}
 
 call vundle#end()
