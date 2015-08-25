@@ -10,4 +10,6 @@
 \set COMP_KEYWORD_CASE upper
 \set show_slow_queries 'SELECT (total_time / 1000 / 60) as total_minutes, (total_time/calls) as average_time, query FROM pg_stat_statements ORDER BY 1 DESC LIMIT 100;'
 \set delayed_job 'select attempts, left(handler,140), created_at, failed_at, locked_by from delayed_jobs order by created_at;'
+\set version 'SELECT version();'
+\echo 'Type :version to see the PostgreSQL version. \n'
 \unset QUIET
