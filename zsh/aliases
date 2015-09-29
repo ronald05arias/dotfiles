@@ -19,6 +19,9 @@ alias crashplan-port='ssh -L 4200:localhost:4243'
 # File sizes for current directory
 alias ducks='du -cksh *'
 
+# Recursively delete `.DS_Store` files
+alias cleands="find . -name '*.DS_Store' -type f -ls -delete"
+
 # syntax highlighting cat
 alias cat=ccat
 
