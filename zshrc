@@ -64,5 +64,5 @@ export BUNDLE_JOBS=4
 
 # gopath
 export GOPATH=$HOME/gocode
-export PATH=$PATH:/usr/local/Cellar/go/1.0.2/bin/
+export PATH=$PATH:/usr/local/Cellar/go/1.0.2/bin
 export PATH=$PATH:$GOPATH/bin
