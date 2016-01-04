@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="rbenvgit"
+ZSH_THEME="chrubygit"
 
 # aliases
 . ~/.zsh/aliases
@@ -34,14 +34,14 @@ export UPDATE_ZSH_DAYS=7
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(aws boot2docker bundler brew brew-cask cake coffee docker fasd gem git git-extras gitfast golang grunt heroku hero npm postgres rails rake-fast rake rbenv redis-cli sbt scala vundle)
-
-# Use homebrew path for rbenv
-export RBENV_ROOT=$(brew --prefix rbenv)
+plugins=(aws boot2docker bundler brew brew-cask cake chruby coffee docker fasd gem git git-extras gitfast golang grunt heroku hero npm postgres rails rake-fast rake redis-cli sbt scala vundle)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# Fix chruby - https://github.com/postmodern/chruby/issues/191
+precmd_functions+=("chruby_auto")
 
 # autocorrect is more annoying than helpful
 unsetopt correct_all
