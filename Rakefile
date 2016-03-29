@@ -88,5 +88,6 @@ def install_oh_my_zsh
   else
     puts "installing oh-my-zsh"
     system %Q{git clone git://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
+    system %Q{git clone https://github.com/zsh-users/zsh-completions "$HOME/.oh-my-zsh/custom/plugins/zsh-completions"}
   end
 end
