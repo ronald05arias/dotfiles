@@ -27,3 +27,6 @@ alias cat=ccat
 
 # use forego instead of foreman
 alias foreman=forego
+
+# check for updates to environment
+alias updateenv='cd ~/.oh-my-zsh/custom/plugins/zsh-completions && git pull && cd ~ && vundle-update && brew update && brew outdated'
