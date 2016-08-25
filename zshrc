@@ -29,25 +29,18 @@ export EDITOR='vim'
 export BUNDLER_EDITOR='vim'
 
 ### homebrew
-export PATH="/usr/local/share/npm/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+#coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+# gopath
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
-### Added by the Heroku Toolbelt
+# Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Bundler > 1.5.0
 export BUNDLE_JOBS=4
-
-# gopath
-export GOPATH=$HOME/gocode
-export PATH=$PATH:/usr/local/Cellar/go/1.0.2/bin
-export PATH=$PATH:$GOPATH/bin
-
-#docker
-eval "$(docker-machine env default)"
 
 # aliases
 . ~/.zsh/aliases
