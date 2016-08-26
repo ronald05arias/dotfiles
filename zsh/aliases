@@ -29,4 +29,4 @@ alias cat=ccat
 alias foreman=forego
 
 # check for updates to environment
-alias updateenv='cd ~/.oh-my-zsh/custom/plugins/zsh-completions && git pull && cd ~ && vundle-update && brew update && brew cleanup && brew outdated && npm -g outdated'
+alias updateenv='vundle-update && zsh <(cat ~/.dotfiles/update)'
