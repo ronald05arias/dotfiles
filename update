@@ -1,36 +1,41 @@
 #!/usr/bin/env zsh
 
 echo "Updating zsh completions"
-cd ~/.oh-my-zsh/custom/plugins/zsh-completions
-git pull
-cd ~/
+  cd ~/.oh-my-zsh/custom/plugins/zsh-completions
+  git pull
+  cd ~/
+
+echo "updating system rubygems"
+  cd ~/
+  sudo gem update --system
+  sudo gem clean
 
 echo "Updating ruby"
-cd ~/development
-ruby_latest_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
-ruby_current_version="$(cat .ruby-version)"
-if [[ $ruby_latest_version = $ruby_current_version ]]; then
-  echo "Latest ruby installed - Updating rubygems"
-  gem update --system
-  gem update bundler
-  gem clean
-else
-  ruby-install "ruby $ruby_latest_version"
-  echo "$ruby_latest_version" > .ruby-version
   cd ~/development
-  gem update --system
-  gem install bundler --no-document
-  gem clean
-fi
-cd ~/
+  ruby_latest_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
+  ruby_current_version="$(cat .ruby-version)"
+  if [[ $ruby_latest_version = $ruby_current_version ]]; then
+    echo "Latest ruby installed - Updating rubygems"
+    gem update --system
+    gem update bundler
+    gem clean
+  else
+    ruby-install "ruby $ruby_latest_version"
+    echo "$ruby_latest_version" > .ruby-version
+    cd ~/development
+    gem update --system
+    gem install bundler --no-document
+    gem clean
+  fi
+  cd ~/
 
 echo "homebrew outdated"
-cd ~/
-wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O ~/Brewfile
-brew bundle
-brew update
-brew cleanup
-brew outdated
+  cd ~/
+  wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O ~/Brewfile
+  brew bundle
+  brew update
+  brew cleanup
+  brew outdated
 
 echo "npm outdated"
-npm -g outdated
+  npm -g outdated
