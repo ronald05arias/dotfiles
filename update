@@ -25,6 +25,9 @@ fi
 cd ~/
 
 echo "homebrew outdated"
+cd ~/
+wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O ~/Brewfile
+brew bundle
 brew update
 brew cleanup
 brew outdated
