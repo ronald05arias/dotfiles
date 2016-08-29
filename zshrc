@@ -12,7 +12,7 @@ export UPDATE_ZSH_DAYS=7
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins+=(aws brew brew-cask cake chruby docker fasd git git-extras grunt heroku hero npm postgres rake-fast vundle zsh-completions)
+plugins+=(aws brew brew-cask cake chruby fasd git git-extras grunt heroku hero npm postgres rake-fast vundle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -35,6 +35,8 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # gopath
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+# zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

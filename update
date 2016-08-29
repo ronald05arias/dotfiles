@@ -1,10 +1,5 @@
 #!/usr/bin/env zsh
 
-echo "Updating zsh completions"
-  cd ~/.oh-my-zsh/custom/plugins/zsh-completions
-  git pull
-  cd ~/
-
 echo "updating system rubygems"
   cd ~/
   sudo gem update --system
