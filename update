@@ -33,7 +33,7 @@ echo "updating zsh completions"
 echo "homebrew outdated"
   cd ~/
   wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O ~/Brewfile
-  brew bundle
+  brew bundle --verbose
   brew update
   brew cleanup
   brew outdated
