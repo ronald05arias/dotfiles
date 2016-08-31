@@ -28,5 +28,8 @@ alias cat=ccat
 # use forego instead of foreman
 alias foreman=forego
 
+# npm exec like bundle exec
+alias npm-exec='PATH=$(npm bin):$PATH'
+
 # check for updates to environment
 alias updateenv='vundle-update && zsh <(cat ~/.dotfiles/update)'
