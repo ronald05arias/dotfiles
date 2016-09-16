@@ -19,6 +19,8 @@ echo "Updating ruby"
     rm -rf ~/src
     rm -rf ~/.rubies/ruby-$ruby_current_version
     echo "$ruby_latest_version" > .ruby-version
+    source $(brew --prefix chruby)/share/chruby/chruby.sh
+    source $(brew --prefix chruby)/share/chruby/auto.sh
     cd ~/development
     gem update --system
     gem install bundler --no-document
