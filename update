@@ -7,7 +7,7 @@ echo "updating system rubygems"
 
 echo "Updating ruby"
   cd ~/development
-  ruby_latest_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
+  ruby_latest_version="$(curl -s https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/stable.txt | tail -1)"
   ruby_current_version="$(cat .ruby-version)"
   if [[ $ruby_latest_version = $ruby_current_version ]]; then
     echo "Latest ruby installed - Updating rubygems"
@@ -16,6 +16,8 @@ echo "Updating ruby"
     gem clean
   else
     ruby-install "ruby $ruby_latest_version"
+    rm -rf ~/src
+    rm -rf ~/.rubies/ruby-$ruby_current_version
     echo "$ruby_latest_version" > .ruby-version
     cd ~/development
     gem update --system
