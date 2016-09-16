@@ -36,6 +36,7 @@ echo "homebrew outdated"
   brew bundle --verbose
   brew update
   brew cleanup
+  brew cask cleanup
   brew outdated
 
 echo "npm outdated"
