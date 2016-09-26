@@ -43,7 +43,7 @@ fpath=(~/.zsh/completions $fpath)
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Bundler > 1.5.0
-export BUNDLE_JOBS=4
+export BUNDLE_JOBS=$(sysctl -n hw.ncpu)
 
 # aliases
 . ~/.zsh/aliases
