@@ -12,7 +12,7 @@ export UPDATE_ZSH_DAYS=7
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins+=(aws brew brew-cask cake chruby fasd git git-extras grunt heroku hero npm postgres rake-fast vundle)
+plugins+=(aws cake chruby fasd git git-extras grunt heroku hero npm postgres rake-fast vundle)
 
 source $ZSH/oh-my-zsh.sh
 
