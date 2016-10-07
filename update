@@ -1,11 +1,13 @@
 #!/usr/bin/env zsh
 
-echo "updating system rubygems"
-  cd ~/
-  sudo gem update --system
-  sudo gem clean
+#echo "updating system rubygems"
+  #cd ~/
+  #sudo gem update --system
+  #sudo gem clean
 
 echo "Updating ruby"
+  source $(brew --prefix chruby)/share/chruby/chruby.sh
+  source $(brew --prefix chruby)/share/chruby/auto.sh
   cd ~/development
   ruby_latest_version="$(curl -s https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/stable.txt | tail -1)"
   ruby_current_version="$(cat .ruby-version)"
