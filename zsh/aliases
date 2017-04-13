@@ -30,9 +30,11 @@ alias foreman=forego
 
 # npm exec like bundle exec
 alias npm-exec='PATH=$(npm bin):$PATH'
+# yarn exec like bundle exec
+alias yarn-exec='PATH=$(yarn bin):$PATH'
 
 # kill .DS_Store files
 alias killds='find ./ -iname .DS_Store -delete'
 
 # check for updates to environment
-alias updateenv='cd ~ && killds && vundle-update && zsh <(cat ~/.dotfiles/update)'
+alias macupdate='cd $HOME && killds && zsh <(curl -s https://raw.githubusercontent.com/damonmorgan/environment/master/mac)'
