@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="chrubygit"
 
 # Change this value to set how frequently ZSH updates
-export UPDATE_ZSH_DAYS=7
+export UPDATE_ZSH_DAYS=3
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
