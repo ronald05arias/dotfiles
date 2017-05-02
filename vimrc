@@ -149,11 +149,12 @@ if filereadable(".vimrc.local")
   source .vimrc.local
 endif
 
-" Use Ack instead of Grep when available
-if executable("ack")
-  set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
+" Use ripgrep instead of Grep when available
+if executable("rg")
+  set grepprg=rg\ --vimgrep
+  let g:ackprg = 'rg --vimgrep'
 endif
-" Use ack for searching
+" Use ripgrep for searching
 let g:ackhighlight = 1
 map <C-F> :Ack<space>
 " Highlight word at cursor and then Ack it.
