@@ -39,9 +39,6 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(~/.zsh/completions $fpath)
 
-# Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # Bundler > 1.5.0
 export BUNDLE_JOBS=$(sysctl -n hw.ncpu)
 
