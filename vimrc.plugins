@@ -7,6 +7,7 @@ call vundle#begin()
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'vim-scripts/AutoClose'
 Plugin 'tpope/vim-fugitive'
@@ -14,6 +15,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'geoffharcourt/vim-matchit'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'git://github.com/tpope/vim-rails.git'
+Plugin 'elixir-editors/vim-elixir'
 Plugin 'wincent/command-t'
 Plugin 'bufexplorer.zip'
 Plugin 'git://github.com/mileszs/ack.vim.git'
