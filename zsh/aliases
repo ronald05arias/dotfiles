@@ -30,6 +30,9 @@ alias cat=ccat
 # use forego instead of foreman
 alias foreman=forego
 
+# gitup for gitx because muscle memory
+alias gitx=gitup
+
 # npm exec like bundle exec
 alias npm-exec='PATH=$(npm bin):$PATH'
 # yarn exec like bundle exec
