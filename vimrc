@@ -1,5 +1,10 @@
 set nocompatible                                     " This must be first, because it changes other options as a side effect.
 
+" https://github.com/powerline/powerline/issues/1925
+if has('python3')
+  silent! python3 1
+endif
+
 if filereadable(expand("~/.vimrc.plugins"))
   source ~/.vimrc.plugins
 endif
