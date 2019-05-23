@@ -1,5 +1,6 @@
 # Heroku
 hcfg() { heroku config --remote "${1:-heroku}"; }
+hirb() { heroku run console --remote "${1:-heroku}"; }
 hcon() { heroku run console --remote "${1:-heroku}"; }
 hrcon() { heroku run rails console --remote "${1:-heroku}"; }
 hps() { heroku ps --remote "${1:-heroku}"; }
@@ -11,6 +12,7 @@ he() {
 }
 
 compctl -K he hcfg
+compctl -K he hirb
 compctl -K he hcon
 compctl -K he hrcon
 compctl -K he hps
