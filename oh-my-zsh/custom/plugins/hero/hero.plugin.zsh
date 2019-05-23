@@ -1,6 +1,6 @@
 # Heroku
 hcfg() { heroku config --remote "${1:-heroku}"; }
-hirb() { heroku run console --remote "${1:-heroku}"; }
+hirb() { heroku run irb --remote "${1:-heroku}"; }
 hcon() { heroku run console --remote "${1:-heroku}"; }
 hrcon() { heroku run rails console --remote "${1:-heroku}"; }
 hps() { heroku ps --remote "${1:-heroku}"; }
