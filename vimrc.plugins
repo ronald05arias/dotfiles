@@ -2,6 +2,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 " Let Vundle manage Vundle
@@ -26,6 +27,7 @@ Plugin 'git://github.com/juvenn/mustache.vim.git'
 Plugin 'git://github.com/kchmck/vim-coffee-script.git'
 Plugin 'elzr/vim-json'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'junegunn/fzf.vim'
 Plugin 'Lokaltog/powerline', {'rtp':  'powerline/bindings/vim'}
 
 call vundle#end()
