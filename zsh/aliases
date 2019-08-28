@@ -42,4 +42,4 @@ alias yarn-exec='PATH=$(yarn bin):$PATH'
 alias killds='find ./ -iname .DS_Store -delete'
 
 # check for updates to environment
-alias macupdate='cd $HOME && zsh <(curl -s https://raw.githubusercontent.com/damonmorgan/environment/master/mac) && killds'
+alias macupdate='cd $HOME && zsh <(curl -q -s https://raw.githubusercontent.com/damonmorgan/environment/master/mac) && killds'

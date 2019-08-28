@@ -9,7 +9,7 @@ echo "Updating ruby"
   source $(brew --prefix chruby)/share/chruby/chruby.sh
   source $(brew --prefix chruby)/share/chruby/auto.sh
   cd ~/development
-  ruby_latest_version="$(curl -s https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/stable.txt | tail -1)"
+  ruby_latest_version="$(curl -q -s https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/stable.txt | tail -1)"
   ruby_current_version="$(cat .ruby-version)"
   if [[ $ruby_latest_version = $ruby_current_version ]]; then
     echo "Latest ruby installed - Updating rubygems"
