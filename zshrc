@@ -43,6 +43,9 @@ source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 # Bundler > 1.5.0
 export BUNDLE_JOBS=$(sysctl -n hw.ncpu)
 
+# GPG
+export GPG_TTY=$(tty)
+
 # aliases
 . ~/.zsh/aliases
 
