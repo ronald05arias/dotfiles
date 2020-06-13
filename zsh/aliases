@@ -41,5 +41,12 @@ alias yarn-exec='PATH=$(yarn bin):$PATH'
 # kill .DS_Store files
 alias killds='find ./ -iname .DS_Store -delete'
 
+# Reload environment
+alias reload!='source ~/.zshrc'
+
 # check for updates to environment
-alias macupdate='cd $HOME && zsh <(curl -q -s https://raw.githubusercontent.com/damonmorgan/environment/master/mac) && killds'
+alias macupdate='cd $HOME && zsh <(curl -q -s https://raw.githubusercontent.com/ronald05arias/environment/master/mac) && killds'
+
+# Git helpers
+current_branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+alias git-remote-push='git push origin $current_branch:$current_branch'

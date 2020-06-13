@@ -25,7 +25,7 @@ precmd_functions+=("chruby_auto")
 unsetopt correct_all
 
 # preferred editor
-export EDITOR='vim'
+export EDITOR='code'
 export BUNDLER_EDITOR='vim'
 
 ### homebrew

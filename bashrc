@@ -3,5 +3,5 @@ source ~/.bash/completions
 source ~/.bash/paths
 source ~/.bash/config
 
-export EDITOR=mvim
+export EDITOR=code
 export BUNDLER_EDITOR=mvim
