@@ -59,6 +59,8 @@ export GPG_TTY=$(tty)
 
 # PowerLevel10k configuration
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 autoload -U compinit && compinit
+
+print 'going to source ~/.p10k.zsh; press enter to continue'
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
