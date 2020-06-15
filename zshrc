@@ -47,6 +47,8 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(~/.zsh/completions $fpath)
 source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+# Path to dev folder.
+export DEV_FOLDER=$HOME/Development
 
 # Bundler > 1.5.0
 export BUNDLE_JOBS=$(sysctl -n hw.ncpu)
