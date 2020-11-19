@@ -49,6 +49,8 @@ fpath=(~/.zsh/completions $fpath)
 source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 # Path to dev folder.
 export DEV_FOLDER=$HOME/Development
+# Kiex (Elixir version manager)
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 # Bundler > 1.5.0
 export BUNDLE_JOBS=$(sysctl -n hw.ncpu)
